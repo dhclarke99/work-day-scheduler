@@ -50,6 +50,11 @@ $(function () {
     // attribute of each time-block be used to conditionally add or remove the
     // past, present, and future classes? How can Day.js be used to get the
     // current hour in 24-hour time?
+    function applyColor(){
+      console.log(dayjs().format('hh'))
+      console.log
+
+    }
     //
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
@@ -60,5 +65,6 @@ $(function () {
     var time = dayjs().format('hh:mm:ss a');
     $('#currentDay').text(time);
     },1000)
+    applyColor()
   });
   
