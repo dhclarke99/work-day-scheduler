@@ -51,18 +51,20 @@ $(function () {
     // past, present, and future classes? How can Day.js be used to get the
     // current hour in 24-hour time?
     function applyColor(){
+      console.log(dayjs().format('HH:mm'));
       var element = $('.row')
       for (var i = 0; i < element.length; i++){
-        
+        // use the parent div to grab children elements [i]?
      console.log(element[i])
-      if(dayjs().format('hh') > element[i].id) {
+     console.log(dayjs().hour)
+      if(dayjs().format('HH') > element[i].id) {
         console.log("true")
         element.addClass('past')
-      } if (dayjs().format('hh') < element[i].id) {
+      } if (dayjs().format('HH') < element[i].id) {
         console.log("false")
         element.addClass('future')
       } 
-      else if (dayjs().format('hh') === element[i].id){
+      else if (dayjs().format('HH') === element[i].id){
         console.log("idk")
         element.addClass('present')
       }
