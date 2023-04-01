@@ -51,27 +51,127 @@ $(function () {
     // past, present, and future classes? How can Day.js be used to get the
     // current hour in 24-hour time?
     function applyColor(){
-      console.log(dayjs().format('HH:mm'));
       var element = $('.row')
+      console.log(element)
       for (var i = 0; i < element.length; i++){
         // use the parent div to grab children elements [i]?
-     console.log(element[i])
-     console.log(dayjs().hour)
-      if(dayjs().format('HH') > element[i].id) {
+      if(dayjs().format('HH') === 9) {
         console.log("true")
-        element.addClass('past')
-      } if (dayjs().format('HH') < element[i].id) {
-        console.log("false")
-        element.addClass('future')
+        document.getElementById("9").className = "row time-block present"
+        document.getElementById("10").className = "row time-block future"
+        document.getElementById("11").className = "row time-block future"
+        document.getElementById("12").className = "row time-block future"
+        document.getElementById("13").className = "row time-block future"
+        document.getElementById("14").className = "row time-block future"
+        document.getElementById("15").className = "row time-block future"
+        document.getElementById("16").className = "row time-block future"
+        document.getElementById("17").className = "row time-block future"
+        
+        //element.addClass('past')
+      } else if(dayjs().format('HH') >= 10 && dayjs().format('HH') < 11) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block present"
+        document.getElementById("11").className = "row time-block future"
+        document.getElementById("12").className = "row time-block future"
+        document.getElementById("13").className = "row time-block future"
+        document.getElementById("14").className = "row time-block future"
+        document.getElementById("15").className = "row time-block future"
+        document.getElementById("16").className = "row time-block future"
+        document.getElementById("17").className = "row time-block future"
       } 
-      else if (dayjs().format('HH') === element[i].id){
-        console.log("idk")
-        element.addClass('present')
-      }
+      else if(dayjs().format('HH') >= 11 && dayjs().format('HH') < 12) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block past"
+        document.getElementById("11").className = "row time-block present"
+        document.getElementById("12").className = "row time-block future"
+        document.getElementById("13").className = "row time-block future"
+        document.getElementById("14").className = "row time-block future"
+        document.getElementById("15").className = "row time-block future"
+        document.getElementById("16").className = "row time-block future"
+        document.getElementById("17").className = "row time-block future"
+      }  else if(dayjs().format('HH') >= 12 && dayjs().format('HH') < 13) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block past"
+        document.getElementById("11").className = "row time-block past"
+        document.getElementById("12").className = "row time-block present"
+        document.getElementById("13").className = "row time-block future"
+        document.getElementById("14").className = "row time-block future"
+        document.getElementById("15").className = "row time-block future"
+        document.getElementById("16").className = "row time-block future"
+        document.getElementById("17").className = "row time-block future"
+      }  else if(dayjs().format('HH') >= 13 && dayjs().format('HH') < 14) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block past"
+        document.getElementById("11").className = "row time-block past"
+        document.getElementById("12").className = "row time-block past"
+        document.getElementById("13").className = "row time-block present"
+        document.getElementById("14").className = "row time-block future"
+        document.getElementById("15").className = "row time-block future"
+        document.getElementById("16").className = "row time-block future"
+        document.getElementById("17").className = "row time-block future"
+      }  else if(dayjs().format('HH') >= 14 && dayjs().format('HH') < 15) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block past"
+        document.getElementById("11").className = "row time-block past"
+        document.getElementById("12").className = "row time-block past"
+        document.getElementById("13").className = "row time-block past"
+        document.getElementById("14").className = "row time-block present"
+        document.getElementById("15").className = "row time-block future"
+        document.getElementById("16").className = "row time-block future"
+        document.getElementById("17").className = "row time-block future"
+      }  else if(dayjs().format('HH') >= 15 && dayjs().format('HH') < 16) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block past"
+        document.getElementById("11").className = "row time-block past"
+        document.getElementById("12").className = "row time-block past"
+        document.getElementById("13").className = "row time-block past"
+        document.getElementById("14").className = "row time-block past"
+        document.getElementById("15").className = "row time-block present"
+        document.getElementById("16").className = "row time-block future"
+        document.getElementById("17").className = "row time-block future"
+      }  else if(dayjs().format('HH') >= 16 && dayjs().format('HH') < 17) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block past"
+        document.getElementById("11").className = "row time-block past"
+        document.getElementById("12").className = "row time-block past"
+        document.getElementById("13").className = "row time-block past"
+        document.getElementById("14").className = "row time-block past"
+        document.getElementById("15").className = "row time-block past"
+        document.getElementById("16").className = "row time-block present"
+        document.getElementById("17").className = "row time-block future"
+      }  else if(dayjs().format('HH') >= 17 && dayjs().format('HH') < 18) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block past"
+        document.getElementById("11").className = "row time-block past"
+        document.getElementById("12").className = "row time-block past"
+        document.getElementById("13").className = "row time-block past"
+        document.getElementById("14").className = "row time-block past"
+        document.getElementById("15").className = "row time-block past"
+        document.getElementById("16").className = "row time-block past"
+        document.getElementById("17").className = "row time-block present"
+      }  else if(dayjs().format('HH') >= 18) {
+        console.log("true")
+        document.getElementById("9").className = "row time-block past"
+        document.getElementById("10").className = "row time-block past"
+        document.getElementById("11").className = "row time-block past"
+        document.getElementById("12").className = "row time-block past"
+        document.getElementById("13").className = "row time-block past"
+        document.getElementById("14").className = "row time-block past"
+        document.getElementById("15").className = "row time-block past"
+        document.getElementById("16").className = "row time-block past"
+        document.getElementById("17").className = "row time-block past"
+      } 
 
     }
-      // console.log(dayjs().format('hh'))
-      // console.log($('#1')[0].id)
+    
 
     }
     //
